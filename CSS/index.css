@@ -1,0 +1,154 @@
+/* index.css是用来美化index首页的*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("../img/龙与虎.jpg") ;
+    background-size:cover ;
+    background-position: 70% 15%;
+;
+}
+.box{
+
+    /* 弹性布局 使页面元素水平+垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 使页面占屏幕总高 */
+    height: 100vh;
+}
+
+.box ul {
+    width: 1000px;
+    height: 620px;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 过渡为0.3秒 */
+    transition: all .3s;
+}
+.box ul li {
+    /* 相对定位 */
+    position: relative;
+    float: left;
+    list-style-type: none;
+    width: 200px;
+    height: 620px;
+    /* 过渡为0.5秒 */
+    transition: all .5s;
+}
+
+.box ul li .oldp {
+    /* 绝对定位 */
+    position: absolute;
+    left: 1%;
+    top: 1%;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(158, 50, 50);
+    /* 文字遮罩层 */
+    background-color: rgba(253, 186, 113, 0.43);
+    transition: all .3s;
+}
+.box ul li .newp {
+    /* 绝对定位 */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0);
+    /* 文字遮罩层 */
+    background-color: rgba(0, 0, 0, 0);
+    transition: all .3s;
+}
+.box ul li:hover .oldp {
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+.box ul li:hover .newp {
+    font-size: 20px;
+}
+.center{
+    position: absolute;
+    left: 38.73%;
+    top:32.48%;
+    width: 127vh
+}
+.center img{
+    transition: opacity .5s;
+}
+.left{
+    position: fixed;
+    left: 2%;
+    top:13.48%;
+    color: #d8836b;
+    font-size: 76px;
+
+    text-align: center;
+    line-height: 88px;
+    background-color: rgba(232, 207, 161, 0.29);
+
+
+}
+.bottom{
+
+    position: fixed;
+    left: 2%;
+    top:80.48%;
+}
+.bottom img {
+    width: 27.2vh;
+}
+.bottom p{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: rgb(158, 50, 50);
+    /* 文字遮罩层 */
+    background-color: rgba(253, 186, 113, 0.43);
+    transition: all .3s;
+
+}
+
+/* 鼠标移入时让所有的li宽度变为90px */
+.box ul:hover li {
+    width: 90px;
+}
+.box ul:hover .newp  {
+    background-color: rgba(232, 158, 100, 0.47);
+    color: #ea9b46;
+}.box ul:hover .oldp  {
+     background-color: rgba(232, 158, 100, 0);
+     color: rgba(234, 155, 70, 0);
+ }
+.box ul:hover .centerimg {
+    width: 0;
+}
+/* 鼠标移入时让当前的宽度变为640px */
+.box ul li:hover {
+    width: 640px;
+
+
+}
+
+.box ul li img{
+  width: 100%;
+}
+
